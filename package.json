@@ -1,0 +1,44 @@
+{
+  "name": "pi-clear-cmd",
+  "version": "0.0.1",
+  "description": "Hide selected plugin slash commands from / autocomplete suggestions in pi",
+  "author": "ReStranger <restranger@disroot.org>",
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --test 'test/**/*.test.ts'",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm pack --dry-run"
+  },
+  "keywords": [
+    "pi",
+    "pi-package"
+  ],
+  "license": "MIT",
+  "files": [
+    "src/",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReStranger/pi-clear-cmd.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.84.4",
+    "@types/node": "^26.5.0",
+    "typescript": "^7.0.2"
+  }
+}
